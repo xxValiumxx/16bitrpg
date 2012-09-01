@@ -3,18 +3,27 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
-using namespace std;
+#include <map>
 
 class TextureManager{
 private:
-	vector<sf::Texture> textureList;
+	std::vector<sf::Texture> textureList;
+	std::map<int, int> textureIDs;
 
+	int tileSize;
 public:
 	TextureManager();
 	~TextureManager();
+	int getTileSize(){ return this->tileSize; }
+	void setTileSize(int tileSize){ this->tileSize = tileSize; }
+	int numtiles;
+	void AddTexture(sf::Texture& texture, int id);
+	sf::Texture& GetTexture(int id);
 
-	void AddTexture(sf::Texture& texture);
-	sf::Texture& GetTexture(int index);
+	//Loads tileset from XML
+	void LoadTileset(const char* filename);
+	int tilesetWidth;
+	int tilesetHeight;
 
 };
 #endif

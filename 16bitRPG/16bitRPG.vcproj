@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;D:\SFML-2.0-rc\include&quot;"
+				AdditionalIncludeDirectories="&quot;C:\Users\Eric\Desktop\LaurentGomila-SFML-04620b9\include&quot;"
 				PreprocessorDefinitions="SFML_STATIC;WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -63,8 +63,8 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="sfml-main-d.lib sfml-system-s-d.lib sfml-window-s-d.lib sfml-graphics-s-d.lib"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;D:\SFML-2.0-rc\lib&quot;"
-				IgnoreDefaultLibraryNames=""
+				AdditionalLibraryDirectories="&quot;D:\SFML-2.0-dev-static\lib\Debug&quot;"
+				IgnoreDefaultLibraryNames="LIBCMT.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -118,8 +118,8 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="&quot;D:\SFML-2.0-rc\include&quot;"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
+				AdditionalIncludeDirectories="&quot;C:\Users\Eric\Desktop\LaurentGomila-SFML-04620b9\include&quot;"
+				PreprocessorDefinitions="SFML_STATIC;WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
@@ -137,8 +137,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="sfml-main.lib sfml-system-s.lib sfml-window-s.lib sfml-graphics-s.lib"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="&quot;D:\SFML-2.0-rc&quot;"
+				AdditionalLibraryDirectories="&quot;D:\SFML-2.0-dev-static\lib\Release&quot;"
+				IgnoreDefaultLibraryNames="LIBCMT.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -177,7 +179,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\Camera.cpp"
+				RelativePath=".\Animation.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Editor.cpp"
 				>
 			</File>
 			<File
@@ -185,7 +191,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Level.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player.cpp"
 				>
 			</File>
 			<File
@@ -203,11 +217,27 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\Camera.h"
+				RelativePath=".\Animation.h"
+				>
+			</File>
+			<File
+				RelativePath=".\CollisionTypes.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Editor.h"
 				>
 			</File>
 			<File
 				RelativePath=".\Engine.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Level.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player.h"
 				>
 			</File>
 			<File
@@ -216,6 +246,10 @@
 			</File>
 			<File
 				RelativePath=".\Tile.h"
+				>
+			</File>
+			<File
+				RelativePath=".\TileFlags.h"
 				>
 			</File>
 		</Filter>

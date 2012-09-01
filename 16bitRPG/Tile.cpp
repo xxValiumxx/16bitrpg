@@ -11,8 +11,13 @@ Tile::~Tile()
 
 }
 
-void Tile::Draw(int x, int y, sf::RenderWindow* rw)
+void Tile::Draw(int x, int y, sf::RenderTexture* rw)
 {
-	baseSprite.setPosition(x, y);
+	baseSprite.setPosition((float)x, (float)y);
+	rw->draw(baseSprite);
+}
+void Tile::DrawWindow(int x, int y, sf::RenderWindow* rw)
+{
+	baseSprite.setPosition((float)x, (float)y);
 	rw->draw(baseSprite);
 }
